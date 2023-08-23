@@ -1,0 +1,101 @@
+/********** 
+ 1. Default  Styles 
+**********/
+@use "sass:math";
+
+body,
+html {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a,
+button {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $light_grey_7;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $light_grey_15;
+}
+
+.page-not-found {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .error {
+      font-size: 50px;
+      text-align: center;
+      padding: unset;
+      margin: 5px;
+      color: rgb(241, 131, 80);
+    }
+    .title {
+      font-size: 30px;
+      text-align: center;
+      padding: unset;
+      margin: 5px;
+    }
+    .go-home {
+      cursor: pointer;
+      text-align: center;
+      border-radius: 6px;
+      margin: 30px 10px;
+      padding: 10px;
+      border: 1px solid grey;
+      box-shadow: 5px 6px $red_pale;
+      // background-color: blac;
+      a {
+        color: black;
+      }
+    }
+  }
+}
+
+.hover-pointer {
+  cursor: pointer;
+}
+
+.form-provider {
+  .input-error {
+    border-color: $grayish_red !important;
+    margin-bottom: 2px !important;
+    font-family: sans-serif;
+  }
+  input.input-focus {
+    border-color: $strong_blue;
+  }
+  p.input-error-message {
+    color: $grayish_red;
+    margin: 0;
+    line-height: 1.3em;
+    font-size: 13px;
+    font-family: $FontFamily;
+  }
+  @media (max-width: 767px) {
+    p.input-error-message {
+      font-size: 6px !important;
+    }
+  }
+}

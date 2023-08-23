@@ -1,0 +1,21 @@
+---
+import { Image } from "../components/Image";
+import { OrderContent } from "../components/order-success/OrderContent";
+import { Wardrobe } from "../components/order-success/Wardrobe";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Flexfy - Order Success">
+  <div id="OrderSuccess">
+    <a class="header" href="/">
+      <Image
+        src="/logo.svg"
+        alt="header-logo"
+        className="header-logo"
+        ariaLabel="header-logo"
+      />
+    </a>
+    <OrderContent />
+    <Wardrobe client:load />
+  </div>
+</Layout>

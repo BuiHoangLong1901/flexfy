@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { RegisterForm } from "../components/login/RegisterForm";
+---
+
+<Layout title="Flexfy - Register">
+  <div class="banner-register"></div>
+  <div id="form-layout">
+    <RegisterForm client:load />
+  </div>
+</Layout>

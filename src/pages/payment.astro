@@ -1,0 +1,55 @@
+---
+import { Contact } from "../components/payment/Contact";
+import { PaymentCheckout } from "../components/payment/PaymentCheckout";
+import { PaymentHeader } from "../components/payment/PaymentHeader";
+import { ContactUser } from "../components/payment/ContactUser";
+import { ShippingAddress } from "../components/payment/ShippingAddress";
+import PaymentLayout from "../layouts/PaymentLayout.astro";
+
+const footer = [
+  {
+    name: "Refund policy",
+    slug: "/refund-policy",
+  },
+  {
+    name: "Shipping policy",
+    slug: "/shipping-policy",
+  },
+  {
+    name: "Privacy policy",
+    slug: "/privacy-policy",
+  },
+  {
+    name: "Terms of service",
+    slug: "/terms-of-service",
+  },
+  {
+    name: "Contact information",
+    slug: "/contact-information",
+  },
+];
+
+const isLogin = true;
+---
+
+<PaymentLayout title="Flexfy - Payment">
+  <div class="payment-information">
+    <div class="payment-information-header">
+      <PaymentHeader />
+      <PaymentCheckout />
+      {isLogin ? <ContactUser /> : <Contact />}
+      <ShippingAddress client:load />
+    </div>
+    <div class="payment-footer">
+      <ul class="footer-list">
+        {
+          footer.map((f) => (
+            <li class="item">
+              <a href={f.slug}>{f.name}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</PaymentLayout>

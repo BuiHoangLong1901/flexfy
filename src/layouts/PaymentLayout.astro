@@ -1,0 +1,39 @@
+---
+import { OrderSummary } from "../components/payment/OrderSummary";
+import "../styles/theme.scss";
+
+interface Props {
+  title: string;
+  isHeader?: boolean;
+  isFooter?: boolean;
+}
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Find comfortable everyday bras and undies from FLEXFY. We deliver bras and undies that blend high-style and ultimate comfort. Find your style today!"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <div id="Payment">
+        <div class="payment-container">
+          <slot />
+          <div class="payment-order-summary-container">
+            <div class="pseudo"></div>
+            <OrderSummary client:only />
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

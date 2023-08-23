@@ -1,0 +1,15 @@
+@mixin Flex($fd, $al) {
+  display: flex;
+  flex-direction: $fd;
+  align-items: $al;
+}
+
+@mixin Font($fs, $cl, $ff, $fw, $lh, $lsp) {
+  font-size: $fs;
+  color: $cl;
+  font-family: $ff;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $lsp;
+  font-style: normal;
+}

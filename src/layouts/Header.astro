@@ -1,0 +1,88 @@
+---
+import Menu from "../components/menu";
+import { Image } from "../components/Image";
+import { getMenu } from "../server-side/api";
+import { CartCount, Logo } from "../icon";
+
+const { slug } = Astro.params;
+const menu = await getMenu();
+---
+
+<header id="header-layout" class="header-desktop">
+  <div class="div-shopify-section">
+    <div class="drawler" style={{ display: "none" }}></div>
+    <div class="banner">
+      <div class="banner-list">
+        <div class="list-other">
+          <a class="item-link" href="/rewards"> Rewards</a>
+          <a class="item-link" href="/fit-guide"> Fit guide</a>
+        </div>
+      </div>
+      <a href="/" class="banner-logo" aria-label="logo"> <Logo /></a>
+      <div class="div banner-option">
+        <div class="search-wrapper">
+          <input type="text" name="search" placeholder="search" />
+          <Image
+            id="search-icon"
+            alt="flexfy-search-icon"
+            ariaLabel="flexfy-search-icon"
+            src="/assets/icons/search-icon.svg"
+            width={20}
+            height={26}
+          />
+        </div>
+        <div class="div menu-right">
+          <div class="item cart-toggle">
+            <div class="overlap-group">
+              <Image
+                id="cart-icon"
+                alt="flexfy-cart-icon"
+                ariaLabel="flexfy-cart-icon"
+                src="/assets/icons/cart.svg"
+                width={20}
+                height={26}
+              />
+              <CartCount client:only />
+            </div>
+          </div>
+          <a href="/login">
+            <Image
+              id="user-icon"
+              alt="flexfy-user-icon"
+              ariaLabel="flexfy-user-icon"
+              className="hover-pointer"
+              src="/assets/icons/user.svg"
+              width={20}
+              height={26}
+            />
+          </a>
+        </div>
+        <Image
+          alt="Menu"
+          ariaLabel="Menu"
+          src="/assets/icons/menu.svg"
+          className="hover-pointer toggle-menu menu-icon"
+          width={20}
+          height={26}
+        />
+      </div>
+    </div>
+    <div class="header-menu">
+      <Menu data={menu!} slug={slug!} />
+    </div>
+  </div>
+</header>
+<script>
+  const buttons = document.querySelectorAll(".toggle-menu");
+  const drawler = document.querySelector(".drawler") as HTMLDivElement;
+  function toggleMenu() {
+    const elem = document.querySelector("#nav-menu") as HTMLUListElement;
+    elem.classList.toggle("active");
+    drawler.style.display = drawler.style.display === "none" ? "block" : "none";
+  }
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", toggleMenu);
+  });
+  drawler?.addEventListener("click", toggleMenu);
+</script>

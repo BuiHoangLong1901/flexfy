@@ -1,0 +1,30 @@
+// variable
+@import "color";
+@import "typography";
+@import "root";
+
+// mixin
+@import "mixin";
+
+//CSS FOR SCREEN
+@import "./components/header";
+@import "./components/footer";
+@import "./components/home";
+@import "./components/product-detail";
+@import "./components/payment";
+@import "./components/collections";
+@import "./components/thank-you";
+@import "./components/login";
+
+//CSS FOR COMPONENT
+@import "./components/carousel";
+@import "./components/collapse";
+@import "./components/card";
+@import "./components/cart-modal";
+@import "./components/select-box";
+@import "./components/rating";
+@import "./components/review";
+@import "./components/modal";
+@import "./components/tabs";
+@import "./components/pagination";
+@import "./components/question";

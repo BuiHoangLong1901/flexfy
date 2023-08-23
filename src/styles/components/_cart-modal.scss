@@ -1,0 +1,325 @@
+@mixin Flex-box($fd, $ai, $jc, $w) {
+  @include Flex($fd, $ai);
+  justify-content: $jc;
+  width: $w;
+}
+body:has(.select-options) {
+  .cart-modal-container .carousel-common .product-detail-slider-track {
+    overflow-x: inherit;
+  }
+}
+
+.modal-container.cart-modal-container {
+  // background: transparent;
+  overflow: scroll;
+  z-index: 10000;
+}
+.cart-modal {
+  @include Flex-box(column, flex-start, unset, 399.61px);
+  position: fixed;
+  transition: 0.25s ease;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 400px;
+  background: #fff !important ;
+  overflow-x: hidden;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  .product-detail-images {
+    width: 100%;
+  }
+  .product-detail-slider-track {
+    gap: 18px !important;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  box-shadow: 0px 0px 10px 0px $light_grey_39;
+  .cart-header {
+    @include Flex-box(unset, center, space-between, 100%);
+    padding: 7px 0px 8.69px 9px;
+    background: #ffefe9;
+    position: fixed;
+  }
+  .cart-content {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .header-text {
+    @include Flex-box(column, unset, center, 74.92px);
+    span {
+      @include Font(18px, $dark_grey_93, $FontFamily, 700, 29.7px, unset);
+      white-space: nowrap;
+    }
+  }
+  .x-icon {
+    @include Flex-box(unset, center, center, 30px);
+    cursor: pointer;
+    height: 12px;
+    padding: 10px 0px 10px 30px;
+    position: fixed;
+    top: 5px;
+    right: 0px;
+  }
+  .cart-items {
+    @include Flex-box(column, unset, unset, 100%);
+    gap: 5px;
+    margin-top: 10px;
+  }
+  .cart-item {
+    display: flex;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+  .item-thumbnail {
+    @include Flex-box(unset, flex-start, unset, 140.185px);
+    padding-bottom: 0px;
+  }
+  .item-img {
+    width: 140.185px;
+    height: 163.729px;
+    object-fit: cover;
+  }
+  .information-container {
+    @include Flex-box(column, flex-start, unset, auto);
+    padding: 6.008px 6.675px 6.669px 6.675px;
+    gap: 12.69px;
+  }
+  .information-main {
+    @include Flex-box(column, flex-start, unset, auto);
+    padding: 0px 0px 0.26px 3.338px;
+    gap: -0.407px;
+    width: auto;
+  }
+  .item-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 150px;
+    @include Font(10.681px, $dark_grey_93, $FontFamily, 700, 17.623px, unset);
+  }
+  .item-category {
+    @include Font(10.681px, $dark_grey_93, $FontFamily, 400, 17.623px, 0.334px);
+  }
+  .information-discounts {
+    @include Flex-box(column, unset, space-between, 122.095px);
+    height: 111.381px;
+  }
+  .discounts {
+    padding: 4px 2px;
+    border-radius: 6.675px;
+    background: var(--p-3, #ffb4b4);
+    border: none;
+    display: block;
+    span {
+      @include Font(9.346px, $dark_blue, $FontFamily, 600, 12.683px, 0.668px);
+      text-align: center;
+      text-transform: lowercase;
+    }
+  }
+  .remove {
+    @include Font(10.681px, $dark_grey_93, $FontFamily, 400, 17.623px, 0.334px);
+    text-decoration-line: underline;
+    width: 40%;
+    cursor: pointer;
+  }
+  .item-right {
+    @include Flex-box(column, flex-end, space-between, 100%);
+    padding: 5px 16px 0.669px 6.675px;
+    gap: 12.69px;
+    height: 162px;
+  }
+  .item-price {
+    @include Flex-box(column, flex-start, unset, auto);
+    padding: 0px 0px 0.26px 3.338px;
+    gap: -0.407px;
+  }
+  .after-seller {
+    @include Font(10.681px, $dark_grey_93, $FontFamily, 700, 17.623px, unset);
+  }
+
+  .before-seller {
+    @include Font(10.681px, $dark_grey_93, $FontFamily, 400, 17.623px, 0.334px);
+    text-decoration-line: line-through;
+  }
+  .quantity {
+    @include Flex-box(unset, center, flex-end, 100%);
+    padding: 0px 0px 0.26px 3.338px;
+    gap: 8.901px;
+  }
+  .minus,
+  .value,
+  .icon-plus {
+    @include Font(10.681px, $dark_grey_93, $FontFamily, 700, 17.623px, 0.334px);
+    cursor: pointer;
+  }
+  .product-detail-match-back-card {
+    @include Flex-box(column, flex-start, unset, 210px);
+    width: 157.5px;
+    height: fit-content;
+  }
+  .product-detail-thumbnail {
+    width: 157.5px;
+    height: 183.952px;
+  }
+  .product-detail-card-img {
+    @include Flex-box(unset, flex-start, unset, 210px);
+    width: 100%;
+    object-fit: cover;
+  }
+  .select .select-icon-close img {
+    height: 7px;
+  }
+  .product-detail-card-title {
+    @include Font(12px, $dark_grey_93, $FontFamily, 700, 19.8px, unset);
+    margin-top: 11.84px;
+    width: 130px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .product-detail-card-price {
+    @include Font(12px, $dark_grey_93, $FontFamily, 400, 19.8px, 0.375px);
+    margin-bottom: 15px;
+  }
+  .product-detail-add-now {
+    @include Flex-box(unset, flex-start, center, 100%);
+    padding: 8.25px 12px 7.5px 3px;
+    border-radius: 7.5px;
+    background: var(--p-3, #ffb4b4);
+    border: none;
+    margin: 0 auto;
+    white-space: nowrap;
+    box-sizing: border-box;
+    .select-value {
+      @include Font(10.5px, $dark_blue, $FontFamily, 600, 14.25px, 0.75px);
+      text-align: center;
+      text-transform: lowercase;
+    }
+    .select-icon-close {
+      border: none;
+      top: 18%;
+    }
+    ul.select-options {
+      & > li > div {
+        text-align: center;
+        background-color: var(--p-3, #ffb4b4) !important;
+        padding: 5px 13px;
+        @include Font(10.5px, $dark_blue, $FontFamily, 600, 14.25px, 0.75px);
+      }
+    }
+  }
+  .estimated {
+    background: $white;
+    border-top: 3px solid $light_grey_5;
+  }
+  .home-product {
+    gap: 18px;
+    height: 288.63px !important;
+    overflow: initial;
+  }
+  #product-list {
+    padding: 23px 0px 23px 16px;
+  }
+  .estimated-total {
+    @include Flex-box(column, flex-start, unset, auto);
+    padding: 23px 16px;
+    gap: 5px;
+    align-self: stretch;
+  }
+  h3 {
+    margin: 0;
+  }
+  .estimated-total-text {
+    @include Font(16.5px, $dark_grey_93, $FontFamily, 700, 21.45px, unset);
+    text-align: center;
+  }
+  .estimated-total-description {
+    @include Font(14px, $dark_grey_93, $FontFamily, 400, 21.45px, unset);
+    text-align: center;
+  }
+  .line {
+    @include Flex-box(unset, flex-start, unset, auto);
+    height: 4px;
+    align-self: stretch;
+    border-radius: 7.5px;
+    background: #d4eac3;
+  }
+  .cart-checkout {
+    @include Flex-box(column, center, unset, auto);
+    padding: 23px 16px;
+    gap: 5px;
+    align-self: stretch;
+  }
+  .checkout-link {
+    @include Flex-box(unset, flex-start, center, auto);
+    padding: 8.25px 12px 7.5px 3px;
+    align-self: stretch;
+    border-radius: 7.5px;
+    background: var(--p-3, #ffb4b4);
+    @include Font(16.5px, $dark_blue, $FontFamily, 700, 14.25px, 0.75px);
+    text-align: center;
+    text-transform: lowercase;
+  }
+  .list-title .heading-best {
+    @include Font(16.5px !important, $dark_blue, $FontFamily, 700, 21.45px, unset);
+  }
+  h3 {
+    @include Font(12px, $dark_grey_93, $FontFamily, 400, 21.45px, unset);
+    text-align: center;
+  }
+  @media (max-width: 740px) {
+    width: 100% !important;
+  }
+}
+
+.cart-modal {
+  .cart-empty {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .cart-image {
+      width: 68px;
+      height: 68px;
+    }
+    .title-empty {
+      color: #d60000;
+      margin-top: 40px;
+      font-family: Nunito Sans;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 29.7px; /* 165% */
+      letter-spacing: 0.25px;
+    }
+    .title-error {
+      color: #111;
+      font-family: Nunito Sans;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 29.7px; /* 165% */
+      letter-spacing: 0.25px;
+    }
+    .btn-link {
+      display: inline-flex;
+      padding: 6px 18.61px 7.69px 19px;
+      align-items: flex-start;
+      border-radius: 5px;
+      background: #ffcfbc;
+      color: #111;
+      text-align: center;
+      font-family: Nunito Sans;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 29.7px; /* 165% */
+      letter-spacing: 0.25px;
+      margin-top: 19.69px;
+    }
+  }
+}

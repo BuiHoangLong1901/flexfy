@@ -1,0 +1,32 @@
+---
+import { Banner } from "../components/home/Banner";
+import { Confidence } from "../components/home/Confidence";
+import {
+  SaleOffProductsSection,
+  BestSellerSection,
+  SaleOffCategoriesSection,
+  ProductRavingSection,
+} from "../components/home/Product";
+import { Promotion } from "../components/home/Promotion";
+import Layout from "../layouts/Layout.astro";
+import { Community } from "../components/home/Community";
+import { Advertising } from "../components/home/Advertising";
+---
+
+<Layout title="Flexfy - Home">
+  <Banner client:load />
+  <BestSellerSection client:load />
+  <SaleOffProductsSection client:load />
+  <SaleOffCategoriesSection client:load />
+  <Advertising client:load />
+  <ProductRavingSection client:load />
+  <Promotion client:load />
+  <Community client:load />
+  <Confidence client:load />
+</Layout>
+<style>
+  main {
+    margin: auto;
+    width: 100%;
+  }
+</style>

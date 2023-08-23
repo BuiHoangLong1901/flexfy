@@ -1,0 +1,77 @@
+.select {
+    @include Flex-div(unset, flex-start, unset, 100%, relative);
+    padding: 20px 29px 5px 11px;
+    border-radius: 5px;
+    border: 1px solid $grayish_orange;
+    background: $white;
+    cursor: pointer;
+    box-sizing: border-box;
+    .select-icon-close {
+        @include Flex-div(unset, center, center, 31px, absolute);
+        height: 19.86px;
+        right: 0px;
+        top: 30%;
+        border-left: 1px solid rgba(179, 179, 179, 0.5);
+        img {
+            width: 10px;
+            height: 10px;
+        }
+    }
+    .payment-checkbox {
+        margin-top: 0 !important;
+    }
+    .select-label {
+        position: absolute;
+        padding: 0px 0px 0.19px 11px;
+        left: 1px;
+        top: 4.14px;
+        @include Font(11px, $dark_grey_55, $FontFamily_2, 400, 18.2px, unset);
+    }
+    .select-value {
+        @include Font(13px, $dark_grey_80, $FontFamily_2, 400, 18.2px, unset);
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+    }
+    ul.select-options {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        background: #fff;
+        left: 0;
+        top: 110%;
+        min-width: 100%;
+        border: 1px solid #c2c2c2;
+        cursor: pointer;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-height: 300px;
+        height: auto;
+        overflow: auto;
+    }
+    ul.select-options > li + li {
+        border-top: 1px solid #eee;
+        width: 100%;
+    }
+    .select-options li {
+        width: 100%;
+    }
+    ul.select-options > li > div {
+        background: #fff;
+        width: 100%;
+        border: 0;
+        padding: 10px 14px;
+        text-align: left;
+        font: inherit;
+        margin: 0;
+        @include Font(13px, $dark_grey_80, $FontFamily_2, 400, 18.2px, unset);
+        box-sizing: border-box;
+    }
+    ul.select-options > li > div:hover {
+        background: #fbfbfb;
+    }
+}

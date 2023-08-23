@@ -1,0 +1,576 @@
+.home-banner {
+  height: 42rem;
+  position: relative;
+  .carousel-wrapper {
+    height: 42rem;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .link-shop-sale {
+    z-index: 1;
+  }
+}
+.home-confidence,
+.home-promotion {
+  @include Flex(column, center);
+
+  .div-rich-text-wrapper {
+    @include Flex(column, center);
+    gap: 2.79px;
+    padding: 21.76px 0px;
+  }
+
+  .text-wrapper {
+    @include Font(8.9px, $black, $FontFamily, 400, 14.7px, unset);
+    margin-top: 0px;
+  }
+  .link-button {
+    @include Flex(column, center);
+    @include Font(10px, $black, $FontFamily, 600, 16.6px, unset);
+    background-color: $white;
+    border: 1.12px solid;
+    border-radius: 5.055px;
+    padding: 5.02px 21.2px 5.02px 21.2px;
+    text-decoration: none;
+  }
+}
+
+.home-promotion {
+  background-color: $orange_pale_10;
+  .heading-leisur-e-l {
+    @include Font(17.9px, $black, $FontFamily, 700, 0, unset);
+  }
+  .home-promotion-img {
+    display: none;
+  }
+  .link-button {
+    border-color: $orange_pale_10;
+  }
+}
+
+.home-confidence {
+  background-color: $red_pale;
+  .heading-leisur-e-l {
+    @include Font(25.1px, $black, $FontFamily_3, 400, 0, unset);
+    font-style: italic;
+  }
+  .link-button {
+    border-color: $red_pale;
+  }
+}
+.home-product::-webkit-scrollbar {
+  display: none;
+}
+.home-product {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 553.09px;
+
+  .product {
+    .thumbnail {
+      width: 500px;
+      height: 411.66px;
+      object-fit: contain;
+      margin-right: 10px;
+    }
+  }
+}
+.home-community {
+  padding: 20px 0 13.86px;
+  button {
+    cursor: pointer;
+    &:hover {
+      opacity: 0.85;
+      transition: opacity ease 0.3s;
+    }
+  }
+  img {
+    cursor: pointer;
+  }
+  &-header {
+    @include Flex(row, center);
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+  &-tiktok-img {
+    transform: translateX(3px) scale(110%);
+  }
+  &-join {
+    @include Flex(row, center);
+    justify-content: space-between;
+    gap: 0 12px;
+    h2 {
+      @include Font(14.641px, $dark_grey_93, $FontFamily_3, 500, 1.033px, unset);
+      font-style: italic;
+    }
+    button {
+      padding: 4.392px 18.276px 5.217px 18.057px;
+      border-radius: 4.88px;
+      background-color: $red_pale;
+      border: 0.98px solid $red_pale;
+      @include Font(8.784px, $black, $FontFamily, 600, 14.494px, unset);
+    }
+  }
+  &-social {
+    display: flex;
+    gap: 0 5.91px;
+    button {
+      @include Flex(row, flex-start);
+      border: none;
+      padding: 4.136px;
+      border-radius: 7.091px;
+      background-color: $red_pale;
+    }
+    img {
+      width: 17.727px;
+      height: 17.727px;
+    }
+  }
+  &-images {
+    margin-top: 13.86px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &-wrapper {
+    width: 170vw;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  &-img {
+    width: 100%;
+    height: 173.644px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.home-advertising {
+  display: grid;
+  grid-template-columns: 100% 0%;
+  height: 240px;
+  &-text {
+    display: none;
+    @include Font(30px, $white, $FontFamily, 700, 34.5px, unset);
+    position: absolute;
+    right: 40px;
+    bottom: 105px;
+  }
+  &-image {
+    height: 240px;
+    position: relative;
+    &:last-child {
+      display: none;
+    }
+    &:first-child p {
+      display: none;
+    }
+    &:first-child button {
+      right: 34px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    a {
+      color: $black;
+    }
+    button {
+      @include Font(14.914px, $black, $FontFamily, 600, 24.609px, unset);
+      position: absolute;
+      bottom: 25px;
+      border: none;
+      padding: 0 13px;
+      height: 29px;
+      border-radius: 8.286px;
+      border: 1.657px solid $white;
+      background: $white;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.93;
+        transition: opacity ease 0.3s;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .home-banner {
+    height: 42rem;
+    position: relative;
+    .carousel-wrapper {
+      height: 42rem;
+      position: relative;
+    }
+    .link-shop-sale {
+      align-items: flex-start;
+      background-color: #ffffff;
+      border-radius: 10px;
+      display: inline-flex;
+      left: 80%;
+      padding: 0.5rem 2rem 0.6rem 2.2rem;
+      position: absolute;
+      top: 35rem;
+      .shop-sale {
+        color: #000000;
+        font-family: "Nunito Sans-SemiBold", Helvetica;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0;
+        line-height: 29.7px;
+        margin-top: -2px;
+        position: relative;
+        text-align: center;
+        white-space: nowrap;
+        width: fit-content;
+      }
+    }
+  }
+  .home-promotion,
+  .home-confidence {
+    padding: 30px 0;
+    .div-rich-text-wrapper {
+      padding: 30px 0;
+    }
+    .text-wrapper {
+      font-size: 16px;
+      margin-bottom: 36px;
+    }
+    .link-button {
+      &:hover {
+        cursor: pointer;
+        opacity: 0.9 !important;
+        transition: opacity ease 0.2s;
+      }
+      border-radius: 10px;
+      font-size: 18px;
+      padding: 9px 36.98px 10.69px 38px;
+      span {
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 29.7px;
+      }
+    }
+  }
+
+  .home-confidence {
+    height: 270px;
+    .heading-leisur-e-l {
+      @include Font(45px, $black, $FontFamily_3, 400, 1.15rem, unset);
+      font-style: italic;
+    }
+  }
+  .home-promotion {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0 !important;
+    .text-wrapper {
+      font-size: 18px;
+    }
+    .home-promotion-img {
+      display: block;
+      height: 100%;
+      max-height: 468px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .heading-leisur-e-l {
+      @include Font(35px, $black, $FontFamily, 700, 1.15rem, unset);
+    }
+  }
+  .home-community {
+    padding-bottom: 0;
+    &-join {
+      gap: 0 15.72px;
+      h2 {
+        @include Font(30px, $dark_grey_93, $FontFamily_3, 400, 34.5px, 1px);
+        font-style: italic;
+        transform: translateY(-3px);
+      }
+      button {
+        border-radius: 10px;
+        padding: 9px 38.02px 10.69px 38px;
+        @include Font(18px, $black, $FontFamily, 600, 29.7px, unset);
+      }
+    }
+    &-tiktok-img {
+      transform: translateX(4px) scale(115%);
+    }
+    &-social {
+      button {
+        padding: 7px;
+        border-radius: 12px;
+        img {
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
+    &-wrapper {
+      width: 100vw;
+    }
+    &-img {
+      height: 480px;
+    }
+  }
+  .home-advertising {
+    grid-template-columns: 50% 50%;
+    height: 700px;
+    &-none {
+      display: block;
+    }
+    &-text {
+      display: block;
+    }
+    &-image {
+      height: 700px;
+      &:last-child {
+        display: block;
+      }
+      &:first-child button {
+        left: 40px;
+        right: unset;
+      }
+      &:last-child button {
+        right: 40px;
+      }
+      button {
+        bottom: 60px;
+        height: 49px;
+        padding: 0 37.58px 0 36px;
+        @include Font(18px, $black, $FontFamily, 600, 29.7px, unset);
+      }
+    }
+  }
+}
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  .home-community-img {
+    height: 300px !important;
+  }
+  .home-advertising {
+    height: 400px;
+    &-image {
+      height: 400px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .home-banner {
+    height: 340px;
+    position: relative;
+    .carousel-wrapper {
+      height: 340px;
+      position: relative;
+    }
+    .link-shop-sale {
+      align-items: center;
+      border-radius: 8.29px;
+      display: flex;
+      height: 29px;
+      justify-content: center;
+      overflow: hidden;
+      padding: 7.46px 29.74px 8.86px 30.66px;
+      position: absolute;
+      top: 286px;
+      width: 87px;
+      .shop-sale {
+        color: $white;
+        font-size: 14.9px;
+        font-weight: 600;
+        letter-spacing: 0;
+        line-height: 1.5rem;
+        margin-bottom: -4.5px;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        margin-top: -7.81px;
+        position: absolute;
+        text-align: center;
+        white-space: nowrap;
+        width: fit-content;
+      }
+    }
+  }
+}
+
+#product-list {
+  padding: 50px 0px 25px 96px;
+  .product-list-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+  }
+  .product-list-header {
+    @include Flex(column, center);
+    justify-content: space-between;
+    width: 100%;
+  }
+  .list-title {
+    @include Flex(unset, center);
+    gap: 20px;
+    justify-content: start;
+    width: 100%;
+    white-space: pre;
+  }
+  .heading-best {
+    @include Font(30px, $dark_grey_93, $FontFamily, 700, 39px, unset);
+    margin: 0;
+  }
+  .product-list-action {
+    width: 100%;
+    height: 25px;
+    margin-right: 25px;
+    @include Flex(unset, center);
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .link-button {
+    display: inline-flex;
+    padding: 9px 37.45px 10.69px 37px;
+    align-items: flex-start;
+    border-radius: 4.88px;
+    border: 0.976px solid var(--p-3, #ffb4b4);
+    background: var(--p-3, #ffb4b4);
+    span {
+      @include Font(18px, $black, $FontFamily, 600, 29.7px, unset);
+      text-align: center;
+    }
+  }
+  .button-previous,
+  .button-next {
+    @include Flex(unset, center);
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: $white;
+    img {
+      width: 100%;
+      height: 100%;
+      flex-shrink: 0;
+    }
+  }
+  .button-next {
+    margin-right: 15px;
+  }
+  .product-list-wrapper {
+    @include Flex(unset, center);
+    height: 245.073px;
+    justify-content: flex-start;
+  }
+  .product-list-wrapper-container {
+    @include Flex(unset, center);
+    height: 245.073px;
+    justify-content: flex-start;
+    flex-shrink: 0;
+  }
+  .product-list-track {
+    @include Flex(unset, flex-start);
+    height: 245.073px;
+    padding-right: 0px;
+    gap: 17px;
+  }
+  .product-list-slide {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 480px;
+    gap: 20px;
+  }
+  .btn-prev,
+  .btn-next {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+  .btn-prev {
+    background-image: url(/assets/icons/left.svg);
+  }
+  .btn-next {
+    background-image: url(/assets/icons/right.svg);
+  }
+  .btn-prev.disable,
+  .btn-next.disable {
+    filter: invert(100%) sepia(0%) saturate(0) hue-rotate(0deg) brightness(100%) contrast(100%);
+  }
+
+  @media (max-width: 768px) {
+    padding: 18.159px 0 18.159px 14.527px;
+    #product {
+      justify-content: flex-start;
+      width: 152.426px;
+      padding: 0;
+    }
+    .list-title {
+      padding: 0;
+    }
+    .product-list-action {
+      padding: 0;
+      margin: 0;
+      gap: 5px;
+      position: absolute;
+      top: 0;
+      right: 3%;
+    }
+    .home-product {
+      height: auto;
+      padding: 18.159px 0px;
+      display: flex;
+      gap: 17.724px;
+    }
+    .product-detail-slider-track {
+      gap: 17.724px;
+    }
+    .product-thumbnail {
+      width: 152.426px !important;
+      height: 182.406px !important;
+    }
+    .heading-best {
+      @include Font(14.641px, $dark_grey_93, $FontFamily, 700, 19.033px, unset);
+    }
+    .link-button {
+      padding: 4.392px 18.276px 5.217px 18.057px;
+    }
+    .link-button span {
+      color: #000;
+      text-align: center;
+      font-family: Nunito Sans;
+      font-size: 8.784px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 14.494px;
+    }
+    .product-list-header {
+      flex-direction: unset;
+      margin-bottom: 28px;
+    }
+    .button-previous,
+    .button-next {
+      @include Flex(unset, center);
+      width: 12px;
+      height: 12px;
+    }
+  }
+}

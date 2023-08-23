@@ -1,0 +1,198 @@
+#form-layout {
+  padding: 17px 16px;
+  @include Flex(column, flex-start);
+  gap: 31px 0;
+  form.login-form.form {
+    flex-direction: column;
+  }
+  .form-login-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    & > h1 {
+      @include Font(19.681px, $dark_grey_93, $FontFamily, 600, 25.585px, 0.656px);
+      width: 190px;
+      margin: 0;
+    }
+    .form-description {
+      margin: 26px 0 9.79px 0;
+      @include Font(9.185px, $dark_grey_93, $FontFamily, 400, 15.154px, 0.656px);
+    }
+    .form-input {
+      width: 100%;
+      margin-bottom: 8px;
+      & > input {
+        width: 100%;
+        outline: none;
+        border: none;
+        box-sizing: border-box;
+        border-bottom: 0.656px solid $dark_grayish_red;
+        padding: 5.576px 6.396px 4.159px 0px;
+        &::placeholder,
+        &[type="text"] {
+          @include Font(9.185px, $dark_grey_93, $FontFamily, 400, 15.154px, 0.656px);
+        }
+        &.input-focus {
+          border-color: $strong_blue;
+        }
+      }
+    }
+    .form-button {
+      margin: 10px 0 18.87px 0;
+      width: 97.125px;
+      padding: 9.841px 0 9.841px 0;
+      border-radius: 6.56px;
+      background: $red_pale;
+      border: none;
+      text-transform: lowercase;
+      @include Font(9.185px, $dark_grey_93, $FontFamily, 700, 9.185px, 0.328px);
+      a {
+        color: $dark_grey_93;
+      }
+    }
+    .form-button.button-register {
+      width: 103.125px;
+    }
+    .form-text {
+      @include Font(9.185px, $dark_grey_93, $FontFamily, 400, 9.185px, 0.426px);
+      span {
+        margin-right: 2px;
+      }
+      a {
+        color: $dark_grayish_red;
+        text-decoration-line: underline;
+      }
+      &.top {
+        margin-bottom: 9.84px;
+      }
+    }
+  }
+  .customer-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding: 17px 0;
+    border-top: 1px solid #7b7171;
+    &.form-login-wrapper > h1 {
+      max-width: 100%;
+    }
+    .form-image-wrap {
+      width: 293.249px;
+      height: 211.133px;
+      background-image: url("/src/components/login/banner-sign.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.banner-login-screen,
+.banner-register {
+  display: none;
+}
+
+@media (min-width: 767px) {
+  body:has(#form-layout) {
+    #footer {
+      display: none;
+    }
+  }
+  #form-layout {
+    flex-direction: row;
+    justify-content: center;
+    width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 600px;
+    padding-top: 60px;
+    box-sizing: border-box;
+    .form-login-wrapper {
+      width: 100%;
+      padding-right: 26px;
+      & > h1 {
+        @include Font(30px, $dark_grey_93, $FontFamily, 600, 39px, 1px);
+        width: 290px;
+      }
+      .form-description {
+        margin-top: 39px;
+        @include Font(14px, $dark_grey_93, $FontFamily, 400, 23.1px, 1px);
+      }
+      .form-input {
+        margin-bottom: 13px;
+        input {
+          &::placeholder,
+          &[type="text"] {
+            @include Font(14px, $dark_grey_93, $FontFamily, 400, normal, 1px);
+          }
+        }
+      }
+      .form-button {
+        margin: 20px 0 30px 0;
+        width: 145px;
+        border-radius: 10px;
+        padding: 15px 0 15px 0;
+        @include Font(14px, $dark_grey_93, $FontFamily, 700, 14px, 0.5px);
+      }
+      .form-button.button-register {
+        width: 166px;
+      }
+      .form-text {
+        @include Font(14px, $dark_grey_93, $FontFamily, 400, 14px, 1px);
+        &.top {
+          margin-bottom: 15px;
+        }
+      }
+      .form-image-wrap {
+        width: 447px;
+        height: 321.83px;
+      }
+    }
+    .form-register {
+      flex-direction: column;
+    }
+    .form-register-wrapper {
+      width: 50%;
+    }
+
+    .customer-wrapper {
+      padding: 0;
+      border-top: none;
+      border-left: 1px solid #7b7171;
+      padding-left: 26px;
+      & > h1 {
+        width: 100%;
+      }
+    }
+  }
+
+  .banner-login-screen,
+  .banner-register {
+    display: block;
+    height: 278px;
+    width: 100vw;
+    background-image: url("/src/components/login/banner.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .banner-register {
+    background-image: url("/src/components/login/banner-register.png");
+  }
+}
+@media (min-width: 768px) and (max-width: 1035px) {
+  #form-layout {
+    width: 100vw;
+    padding: 60px 0;
+    padding-bottom: 300px;
+    box-sizing: border-box;
+    flex-direction: column;
+    .form-login-wrapper,
+    .customer-wrapper {
+      width: 90%;
+      padding: 0;
+    }
+    .customer-wrapper {
+      padding: 17px 0;
+      border-top: 1px solid #7b7171;
+      border-left: none;
+    }
+  }
+}

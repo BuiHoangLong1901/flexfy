@@ -1,0 +1,79 @@
+---
+import { SEO, Props as SEOProps } from "astro-seo";
+import { CartModal } from "../components/CartModal";
+import Footer from "./Footer.astro";
+import Header from "./Header.astro";
+import "../styles/theme.scss";
+interface Props {
+  title: string;
+  noindex?: boolean;
+  description?: string;
+  seo?: SEOProps;
+  image?: string;
+}
+
+const {
+  title,
+  noindex,
+  description = "Find comfortable everyday bras and undies from FLEXFY. We deliver bras and undies that blend high-style and ultimate comfort. Find your style today!",
+  image,
+  seo = {
+    title: title,
+    noindex: noindex,
+    description: description,
+    openGraph: {
+      basic: {
+        title: title,
+        type: "website",
+        image: image ?? "/logo.svg",
+      },
+    },
+    twitter: {
+      card: "summary",
+      title: title,
+      description: description,
+      image: image ?? "/logo.svg",
+    },
+  },
+} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    {noindex && <meta name="robots" content="noindex" />}
+    {!noindex && seo && <SEO {...seo} />}
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <CartModal client:only />
+    <script type="module">
+      const header = document.getElementById("header-layout");
+      const drawler = document.querySelector(".drawler");
+      function toggleMenu() {
+        const elem = document.querySelector("#nav-menu");
+        elem.classList.remove("active");
+        drawler.style.display = "none";
+      }
+      window.addEventListener("resize", () => {
+        toggleMenu();
+      });
+      document.addEventListener("scroll", () => {
+        if (window.screen.width < 768) return;
+        if (document.documentElement.scrollTop > header.offsetHeight) {
+          header?.classList.add("header-mobile");
+        } else {
+          header?.classList.remove("header-mobile");
+        }
+      });
+    </script>
+  </body>
+</html>

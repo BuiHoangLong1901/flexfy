@@ -1,0 +1,82 @@
+---
+import { Collapse } from "../components/Collapse";
+import { Image } from "../components/Image";
+import { SelectBox } from "../components/SelectBox";
+import { getFooter } from "../server-side/api";
+const footer: Footer[] | null = await getFooter();
+const currency = [
+  { label: "Peso (PHP ₱)", value: "PHP" },
+  { label: "United States (USD $)", value: "USD" },
+];
+---
+
+<footer id="footer">
+  <div class="information">
+    <div class="logo-container">
+      <div class="logo-footer">
+        <Image
+          alt="logo-1"
+          ariaLabel="logo-1"
+          className="item-6"
+          src="/assets/icons/logo-1.svg"
+        />
+        <p class="title">Sign up for ₱50 OFF your first order!</p>
+      </div>
+      <div class="div-footersignup">
+        <div class="form">
+          <input placeholder="email address" class="div-needsclick" />
+          <button class="btn-join"> join</button>
+        </div>
+        <p class="text-form">
+          <span class="text-wrapper"
+            >*By signing up, you agree to receive marketing emails from FLEXFY.
+            You can unsubscribe any time by clicking the link at the bottom of
+            our emails.
+          </span>
+          <a href="/privacy-terms">Privacy & Terms.</a>
+        </p>
+      </div>
+    </div>
+    <div class="list-infor">
+      <div class="list-footerinfo">
+        {
+          footer?.map((l) => (
+            <Collapse
+              client:load
+              labels={l.name}
+              items={l.menu.map((m) => ({ label: m.name, code: m.slug }))}
+            />
+          ))
+        }
+      </div>
+      <div class="div-footerinfo-icon">
+        <div class="footerinfo-icon">
+          <div class="icons">
+            <span class="icon_instagram"></span>
+            <span class="icon_facebook"></span>
+            <span class="icon_tiktok"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact">
+    <div class="copy-right">
+      <p>
+        © Copyright 2023 FLEXFY / <a href="/terms" class="link-text">Terms</a> /
+        <a href="/privacy" class="link-text">Privacy</a>
+      </p>
+    </div>
+    <div class="design-info">
+      <p>Designed by AVL Team</p>
+    </div>
+    <div class="curency-info">
+      <SelectBox
+        defaultValue={currency[0].value}
+        items={currency}
+        className="select-currency form-input"
+        client:load
+      />
+    </div>
+  </div>
+</footer>

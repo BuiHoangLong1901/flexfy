@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,500;1,6..12,400;1,6..12,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Roboto+Mono:ital,wght@0,100;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500;600;800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,500;1,6..12,400;1,6..12,500&family=Nunito:ital,wght@1,900&family=Playfair+Display:ital,wght@1,500;1,600&display=swap");
+$Regular: 400;
+$Medium: 500;
+$FontFamily: "Nunito Sans", Helvetica;
+$FontFamily_2: "Inter", sans-serif;
+$FontFamily_3: "Playfair Display", serif;
+
+body {
+  font-family: $FontFamily !important;
+  font-style: normal;
+  margin: 0px;
+  -webkit-tap-highlight-color: $hight_light_color;
+}
+
+.text-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

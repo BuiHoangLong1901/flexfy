@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { LoginForm } from "../components/login/LoginForm";
+import { CustomerForm } from "../components/login/CustomerForm";
+---
+
+<Layout title="Flexfy - Login">
+  <div class="banner-login-screen"></div>
+  <div id="form-layout">
+    <LoginForm client:load />
+    <CustomerForm />
+  </div>
+</Layout>

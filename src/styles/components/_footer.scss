@@ -1,0 +1,391 @@
+$font-family: Arial;
+
+#footer {
+  @include Flex(column, flex-start);
+  gap: 10px;
+  p {
+    margin: 0 !important;
+  }
+}
+.information {
+  @include Flex(column, flex-start);
+  padding: 16px 16px;
+  gap: 10px;
+  align-self: stretch;
+}
+.logo-container {
+  @include Flex(column, flex-start);
+  gap: 5px;
+  width: 100%;
+}
+.logo-footer {
+  width: 100%;
+  @include Flex(column, flex-start);
+  gap: 5px;
+  img {
+    width: 104.217px;
+    height: 39.597px;
+  }
+}
+.div-footersignup {
+  @include Flex(column, flex-start);
+  gap: 5px;
+}
+.title {
+  width: 100%;
+  @include Font(10.307px, $dark_grey_93, $FontFamily, 600, 17.006px, 0.736px);
+}
+.form {
+  @include Flex(unset, flex-start);
+  padding: 0px 0px 3.681px 0px;
+  gap: 7.362px;
+  input {
+    @include Flex(unset, flex-start);
+    padding-right: 0px;
+    outline: none;
+    border: none;
+    &::placeholder {
+      @include Font(8.834px, $dark_grey_96, $FontFamily, 400, normal, 0.736px);
+      text-transform: lowercase;
+    }
+  }
+  .div-needsclick {
+    @include Flex(unset, flex-start);
+    padding: 8.411px 59.736px 11.411px 9.515px;
+    border-radius: 7.362px;
+    border: 0.736px solid #000;
+  }
+  .btn-join {
+    @include Flex(row, center);
+    justify-content: space-between;
+    padding: 9px 20px;
+    border-radius: 7.362px;
+    outline: none;
+    background: var(--p-3, #ffb4b4);
+    border: none;
+    @include Font(10.307px, $black, $FontFamily, 700, 17.006px, 0.736px);
+    text-align: center;
+    font-style: normal;
+    text-transform: lowercase;
+  }
+}
+.text-form {
+  margin: 0 !important;
+  @include Flex(column, flex-start);
+  padding: 0px 4px;
+  gap: 3px;
+  .text-wrapper {
+    width: 302.237px;
+    height: fit-content;
+    @include Font(7.362px, $black, $FontFamily, 400, 17.006px, 0.736px);
+    line-height: normal;
+  }
+  a {
+    @include Font(7.362px, $dark_grey_77, $FontFamily, 400, normal, 0.736px);
+    font-style: normal;
+    text-decoration-line: underline;
+  }
+}
+.div-footerinfo {
+  @include Flex(unset, flex-start);
+  padding: 0.5px;
+  justify-content: space-between;
+  align-self: stretch;
+  padding: 7px 30px 7.095px 18px;
+  border-top: 0.5px solid #848484;
+  ul {
+    display: none;
+  }
+  h6.footerinfo-input {
+    @include Flex(unset, flex-start);
+    margin: 0;
+    justify-content: space-between;
+    flex: 100;
+    @include Font(12px, $dark_grey_55, $FontFamily_2, 600, normal, unset);
+    outline: none;
+    border: none;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  span {
+    @include Font(12px, $dark_grey_55, $FontFamily_2, 600, normal, unset);
+    text-align: right;
+    font-style: normal;
+    line-height: normal;
+    flex: 100;
+  }
+}
+.div-footerinfo-icon {
+  @include Flex(unset, center);
+  padding: 29px 0.5px 0px 0.5px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-top: 0.5px solid #848484;
+  margin-top: 10px;
+  .icons {
+    @include Flex(unset, center);
+    flex: 100;
+    justify-content: center;
+    gap: 10.881px;
+    flex: 100;
+    span {
+      display: inline-block;
+      background-size: cover;
+      filter: invert(50%);
+    }
+    .icon_instagram {
+      width: 16.261px;
+      height: 14.665px;
+      background-image: url(/assets/icons/Instagram-2.svg);
+    }
+    .icon_facebook {
+      width: 16.261px;
+      height: 16.132px;
+      transform: scale(120%);
+      background-image: url(/assets/icons/Facebook-1.svg);
+    }
+    .icon_tiktok {
+      width: 16.261px;
+      height: 15.199px;
+      background-image: url(/assets/icons/tiktok-1.svg);
+    }
+  }
+  .footerinfo-icon {
+    @include Flex(unset, center);
+    justify-content: space-between;
+    flex: 100;
+  }
+  img {
+    @include Flex(unset, center);
+    width: 16.261px;
+    height: 14.665px;
+    color: $dark_grey_55;
+  }
+}
+.contact {
+  @include Flex(column, flex-start);
+  align-self: stretch;
+  .copy-right {
+    @include Flex(unset, flex-start);
+    justify-content: center;
+    align-self: stretch;
+    background: var(--p-3, #ffb4b4);
+    p {
+      @include Flex(unset, flex-start);
+      gap: 0.693px;
+      padding: 3px 0;
+      margin: 0;
+      @include Font(7.844px, $dark_grey_93, $FontFamily, 400, 12.942px, unset);
+      text-align: center;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.design-info {
+  @include Flex(column, center);
+  justify-content: center;
+  gap: 0.693px;
+  align-self: stretch;
+  p {
+    @include Font(7.844px, $dark_grey_93, $FontFamily, 400, 12.942px, unset);
+    text-align: center;
+    padding: 4px;
+  }
+}
+.curency-info {
+  @include Flex(unset, flex-start);
+  justify-content: center;
+  align-self: stretch;
+  background: #faf8f4;
+  padding: 0px 15.995px 15px 14px;
+  .form-info {
+    @include Flex(unset, center);
+    max-width: 127.461px;
+    gap: 6.536px;
+  }
+  .form-input {
+    @include Flex(unset, center);
+    max-width: 181.461px;
+    padding: 3.138px 6.536px 3.131px 5.229px;
+    gap: 6.536px;
+    background: #f3f3f3;
+    border: none;
+    border-radius: 2px;
+    .select-icon-close {
+      border: none;
+      top: 9%;
+    }
+    .select-options {
+      top: -270%;
+    }
+    .select-value {
+      @include Flex(unset, flex-start);
+      margin: 0;
+      @include Font(10.458px, $dark_grey_80, $font-family, 400, 14.38px, unset);
+    }
+    ul.select-options > li > div {
+      padding: 6px 10px;
+    }
+  }
+  .icon-down {
+    width: 6.314px;
+    height: 7.314px;
+  }
+}
+.list-infor {
+  width: 100%;
+}
+.list-footerinfo {
+  @include Flex(column, unset);
+  gap: 10px;
+}
+.link-text {
+  color: $dark_grey_96;
+}
+@media (min-width: 768px) {
+  #footer {
+    gap: 0;
+    .logo-container {
+      margin-right: 50px;
+      width: 510px;
+      .logo-footer img {
+        width: 141px;
+        height: 54px;
+        flex-shrink: 0;
+      }
+      .title {
+        @include Font(14px, $dark_grey_93, $FontFamily, 600, 23.1px, 1px);
+      }
+      .text-form {
+        width: 100%;
+        gap: 3px 0;
+        .text-wrapper {
+          width: 100%;
+          height: fit-content;
+        }
+        a {
+          @include Font(10px, $dark_grey_77, $FontFamily, 400, normal, 1px);
+        }
+      }
+      input {
+        padding: 15.5px 1px 15.5px 17px;
+      }
+      input::placeholder {
+        @include Font(12px, $dark_grey_96, $FontFamily, 400, normal, 1px);
+      }
+    }
+    .btn-join {
+      padding: 11.96px 25.45px 11.04px 25px;
+      border-radius: 10px;
+      @include Font(14px, $black, $FontFamily, 700, 23.1px, 1px);
+      text-transform: lowercase;
+    }
+  }
+  .information {
+    flex-direction: row-reverse;
+    justify-content: center;
+    background: #faf8f4;
+    padding: 20px 0px;
+  }
+  .div-footersignup {
+    width: 100%;
+    .form {
+      width: 100%;
+      input {
+        flex: 1;
+      }
+    }
+  }
+  .div-footerinfo {
+    border: none;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 7px 29px 7.095px 0px;
+    width: 21%;
+    h6 {
+      @include Font(
+        14px !important,
+        $dark_grey_93 !important,
+        $FontFamily !important,
+        700 !important,
+        23.1px !important,
+        unset
+      );
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    ul {
+      @include Flex(column, flex-start);
+      max-height: 3240px;
+      padding: 4px 158.5px 3.1px 0px;
+      gap: 7.09px;
+      margin-top: 6px;
+      width: 100%;
+    }
+    li {
+      @include Font(14px, $dark_grey_93, $FontFamily, 400, 23.1px, 1px);
+      text-transform: lowercase;
+      list-style-type: none;
+    }
+  }
+  .list-infor {
+    @include Flex(column, unset);
+    justify-content: flex-start;
+    padding: 35px 20px;
+    padding-left: 50px;
+    width: 75%;
+  }
+  .list-footerinfo {
+    @include Flex(initial, unset);
+    flex-flow: wrap;
+  }
+  .plus {
+    display: none;
+  }
+  .div-footerinfo-icon {
+    padding-top: 77px;
+    border: none;
+    background: #faf8f4;
+    .icons {
+      justify-content: start;
+      img {
+        @include Flex(unset, center);
+        width: 22px;
+        height: 22px;
+      }
+      span {
+        filter: invert(0%);
+        cursor: pointer;
+      }
+      .icon_instagram {
+        width: 22px;
+        height: 22px;
+      }
+      .icon_facebook {
+        width: 22px;
+        height: 22px;
+      }
+      .icon_tiktok {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+  .copy-right p,
+  .design-info p {
+    font-size: 12px !important;
+    padding: 10px;
+  }
+  .text-form .text-wrapper {
+    @include Font(10px, $black, $FontFamily, 400, normal, 1px);
+  }
+  .curency-info .form-input {
+    padding: 4.8px 10px 4.79px 8px;
+    span {
+      font-size: 16px !important;
+    }
+  }
+}

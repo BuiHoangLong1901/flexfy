@@ -4,7 +4,6 @@ import robotsTxt from "astro-robots-txt";
 import sitemap from "astro-sitemap";
 import { defineConfig } from "astro/config";
 import dotenv from "dotenv";
-import compress from "astro-compress";
 dotenv.config();
 
 const site = process.env.SITE || "https://flexfy.meta-book.online";
@@ -27,9 +26,6 @@ export default defineConfig({
       ],
     }),
     react(),
-    compress({
-      SVG: false,
-    }),
   ],
   output: "server",
   adapter: node({ mode: "middleware" }),

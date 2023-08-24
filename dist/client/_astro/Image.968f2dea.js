@@ -1,1 +1,0 @@
-import{j as t}from"./jsx-runtime.51014c9d.js";import{m as e}from"./motion.a2ef69fa.js";const n=a=>{const{ariaLabel:r,...i}=a;return t.jsx("img",{...i,"aria-label":r})},l=a=>{const{ariaLabel:r,loading:i="lazy",...o}=a;return t.jsx(e.img,{...o,"aria-label":r,loading:i})};export{n as I,l as a};

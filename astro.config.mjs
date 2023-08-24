@@ -4,8 +4,8 @@ import robotsTxt from "astro-robots-txt";
 import sitemap from "astro-sitemap";
 import { defineConfig } from "astro/config";
 import dotenv from "dotenv";
+import vercel from "@astrojs/vercel/serverless";
 dotenv.config();
-
 const site = process.env.SITE || "https://flexfy.meta-book.online";
 
 // https://astro.build/config
@@ -28,7 +28,11 @@ export default defineConfig({
     react(),
   ],
   output: "server",
-  adapter: node({ mode: "middleware" }),
-  vite: { ssr: { noExternal: ["path-to-regexp"] } },
+  adapter: vercel(),
+  vite: {
+    ssr: {
+      noExternal: ["path-to-regexp"],
+    },
+  },
   compressHTML: true,
 });

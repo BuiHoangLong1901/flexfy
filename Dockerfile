@@ -49,4 +49,4 @@ COPY --chown=1001:1001 --from=prod_deps /app/node_modules ./node_modules
 
 EXPOSE 3000
 
-CMD ["yarn", "start-prod"]
+CMD ["yarn", "start"]

@@ -16,24 +16,6 @@ COPY . .
 # COPY .env.production.sample .env.production
 RUN yarn build
 
-# 3. Install dependencies production only
-FROM node:18-alpine AS prod_deps
-
-WORKDIR /app
-
-# Install dependencies based on the preferred package manager
-COPY package.json yarn.lock* package-lock.json* ./
-RUN \
-    if [ -f yarn.lock ]; then yarn --prod; \
-    elif [ -f package-lock.json ]; then npm install -omit=dev; \
-    else echo "Lockfile not found." && exit 1; \
-    fi
-
-# 3. Production image, copy all the files and run next
-FROM node:18-alpine
-
-USER 1001
-
 WORKDIR /app
 
 ENV NODE_ENV=production

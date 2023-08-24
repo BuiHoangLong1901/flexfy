@@ -54,7 +54,7 @@ const {
       <slot />
     </main>
     <Footer />
-    <CartModal client:only />
+    <CartModal client:only="react" />
     <script type="module">
       const header = document.getElementById("header-layout");
       const drawler = document.querySelector(".drawler");

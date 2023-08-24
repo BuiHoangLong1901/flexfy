@@ -9,6 +9,6 @@ const title = slug?.replace(/-/g, " ").replace(/\b[a-z]/g, function (slug) {
 
 <Layout title={`Flexfy - ${title ?? "Product Detail"}`}>
   <div id="productDetail">
-    <ProductDetail slug={slug} client:only />
+    <ProductDetail slug={slug} client:only="react" />
   </div>
 </Layout>

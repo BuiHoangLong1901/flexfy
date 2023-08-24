@@ -40,13 +40,6 @@ ENV NODE_ENV=production
 ENV HOST=0.0.0.0
 ENV PORT=3000
 
-COPY --chown=1001:1001 --from=builder /app/server.js ./server.js
-COPY --chown=1001:1001 --from=builder /app/package.json ./package.json
-COPY --chown=1001:1001 --from=builder /app/astro.config.mjs ./astro.config.mjs
-COPY --chown=1001:1001 --from=builder /app/dist ./dist
-COPY --chown=1001:1001 --from=builder /app/public ./public
-COPY --chown=1001:1001 --from=prod_deps /app/node_modules ./node_modules
-
 EXPOSE 3000
 
 CMD ["yarn", "start"]

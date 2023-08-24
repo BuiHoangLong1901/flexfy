@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Crawl-delay: 10
-Sitemap: https://flexfy.meta-book.online/sitemap-index.xml

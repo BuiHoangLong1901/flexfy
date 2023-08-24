@@ -1,0 +1,10 @@
+/login                /.netlify/functions/entry    200
+/payment              /.netlify/functions/entry    200
+/shipping             /.netlify/functions/entry    200
+/register             /.netlify/functions/entry    200
+/order-success        /.netlify/functions/entry    200
+/payment-method       /.netlify/functions/entry    200
+/                     /.netlify/functions/entry    200
+/*                    /.netlify/functions/entry    200
+/products/:slug       /.netlify/functions/entry    200
+/collections/:slug    /.netlify/functions/entry    200

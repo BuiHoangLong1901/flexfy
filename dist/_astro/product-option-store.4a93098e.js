@@ -1,0 +1,1 @@
+import{c as r,p as a,a as s}from"./middleware.ce65d969.js";const i=r()(a((o,c)=>({sizes:[],colors:[],categories:[],menu:[],footer:[],addOption:(e,t)=>o({[e]:t})}),{name:"product-option",storage:s(()=>localStorage)}));export{i as u};

@@ -4,7 +4,6 @@ import dotenv from "dotenv";
 dotenv.config();
 const site = process.env.SITE || "https://flexfy.meta-book.online";
 // astro.config.mjs
-import { defineConfig } from "astro/config";
 import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config

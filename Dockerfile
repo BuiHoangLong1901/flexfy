@@ -6,9 +6,9 @@ WORKDIR /app
 COPY . .
 # This will do the trick, use the corresponding env file for each environment.
 # COPY .env.production.sample .env.production
-RUN yarn build
+RUN yarn
 
-WORKDIR /app
+RUN yarn build 
 
 ENV NODE_ENV=production
 ENV HOST=0.0.0.0

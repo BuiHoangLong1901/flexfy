@@ -1,4 +1,4 @@
-/// <reference types="astro/client" />
+/// <reference types="astro/client-image" />
 
 declare interface IPagination {
   page: number;

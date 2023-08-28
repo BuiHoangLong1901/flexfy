@@ -35,4 +35,7 @@ export default defineConfig({
   adapter: node({ mode: "middleware" }),
   vite: { ssr: { noExternal: ["path-to-regexp"] } },
   compressHTML: true,
+  experimental: {
+    assets: true,
+  },
 });

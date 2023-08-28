@@ -3,7 +3,6 @@ import { SEO, Props as SEOProps } from "astro-seo";
 import { CartModal } from "../components/CartModal";
 import Footer from "./Footer.astro";
 import Header from "./Header.astro";
-import "../styles/theme.scss";
 interface Props {
   title: string;
   noindex?: boolean;
@@ -45,6 +44,9 @@ const {
     {!noindex && seo && <SEO {...seo} />}
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style lang="scss">
+      @import "../styles/theme.scss";
+    </style>
     <title>{title}</title>
   </head>
 
